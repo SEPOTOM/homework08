@@ -1,0 +1,470 @@
+/* &display=swap&subset=cyrillic-ext */
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,700,900&display=swap");
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('../fonts/HelveticaNeue-Roman.woff2') format('woff2'), url('../fonts/HelveticaNeue-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
+img {
+    vertical-align: top;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-size: 16px;
+    /* по умолчанию */
+}
+
+body {
+    line-height: 1;
+}
+
+.wrapper {
+    min-height: 100%;
+    overflow: hidden;
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+
+/* ------------GLOBAL------------------ */
+
+.bl {
+    display: block;
+}
+
+.inbl {
+    display: inline-block;
+}
+
+.in {
+    display: inline;
+}
+
+
+/* --------HEADER&FOOTER----------------- */
+
+.header,
+.footer {
+    text-align: center;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #c04848;
+    border: 5px double #818a37;
+}
+
+
+/* ----------PSEUDO-CLASSES-------------- */
+
+.pseudoclasses,
+.pseudoelements,
+.list {
+    padding: 20px;
+    box-shadow: inset 0 0 10px 3px #000;
+}
+
+.pseudoclasses .block {
+    margin: 0 0 50px 0;
+}
+
+.pseudoclasses .block:last-child {
+    margin: 0;
+}
+
+.block {
+    background-color: #9146a8;
+    border: 2px solid #29ccb6;
+    padding: 10px;
+    text-align: center;
+    color: #e3e3e3;
+    font-size: 20px;
+}
+
+.block p {
+    color: #e5ff00;
+    font-size: 35px;
+    text-transform: uppercase;
+}
+
+.block div {
+    outline: 5px solid #29ccb6;
+}
+
+.block *:not(:last-child) {
+    width: 100%;
+    margin: 0 0 30px 0;
+}
+
+.hover .bl:hover {
+    background: linear-gradient(45deg, #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%);
+}
+
+.hover .inbl:hover {
+    text-decoration: line-through;
+    padding: 5px;
+    letter-spacing: 10px;
+}
+
+.hover .in:hover {
+    color: #e5ff00;
+    font-style: oblique;
+    font-weight: 100;
+}
+
+.active .bl:active {
+    padding: 30px;
+    font-size: 50px;
+}
+
+.active .inbl:active {
+    margin-bottom: 100px;
+}
+
+.active .in:active {
+    letter-spacing: 30px;
+}
+
+.visited .inbl {
+    color: #faebd7;
+    font-size: 50px;
+}
+
+.visited .inbl:visited {
+    color: #ff7f50;
+}
+
+.focus .inbl {
+    color: #ff1493;
+    font-size: 50px;
+}
+
+.focus .inbl:focus {
+    outline: 5px dashed #e5ff00;
+    background-color: #fff;
+    text-decoration: underline;
+}
+
+.target .inbl {
+    color: #fff;
+}
+
+.target div {
+    height: 100px;
+    outline: none;
+    border-radius: 30px;
+    box-shadow: inset 3px 15px 50px 23px #faebd7;
+}
+
+.target div::before {
+    content: 'Div';
+    display: none;
+    margin: 20px 0 0 0;
+    color: #00ffff;
+    font-size: 50px;
+    text-transform: lowercase;
+    letter-spacing: 25px;
+}
+
+.target div:target::before {
+    display: inline-block;
+}
+
+.childs p {
+    color: #fff;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.childs>*:first-child {
+    font-size: 50px;
+    text-decoration: overline;
+}
+
+.childs p:first-of-type {
+    text-shadow: 1px 1px 2px #00ffff;
+}
+
+.childs p:last-child {
+    color: #e5ff00;
+}
+
+.childs>*:nth-child(4n) {
+    word-spacing: 15px;
+    opacity: .3;
+}
+
+.childs ul li:nth-child(odd) {
+    background-color: #000;
+}
+
+.childs ul li:nth-child(even) {
+    background-color: #fff;
+    color: #000;
+}
+
+
+/* -------------PSEUDO-ELEMENTS-------------- */
+
+.pseudoelements .block {
+    border: 3px double #ff1493;
+}
+
+.pseudoelements .block:not(:last-child) {
+    margin: 0 0 50px 0;
+}
+
+.firstline div::first-line {
+    font-size: 12px;
+    color: #000;
+}
+
+.firstletter div::first-letter {
+    font-size: 50px;
+    border: 3px solid #c04848;
+    background-color: #fff;
+}
+
+.beforeafter div {
+    text-align: justify;
+}
+
+.beforeafter div::before {
+    content: 'Before';
+    font-size: 25px;
+    font-style: oblique;
+    color: #00ff4c;
+    display: inline-block;
+    margin: 0 60px 0;
+}
+
+.beforeafter div::after {
+    content: 'After';
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #00ff4c;
+    display: inline-block;
+    margin: 0 0 0 30px;
+}
+
+
+/* ------------LIST------------------ */
+
+.list {
+    margin: 0 0 100px 0;
+}
+
+.list ul li {
+    font-size: 40px;
+    padding: 0 0 0 20px;
+}
+
+.list ul li:not(:last-child) {
+    margin: 0 0 30px 0;
+}
+
+.list ul li:not(:nth-child(even)):before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 30px;
+    background-color: #ff0000;
+    margin: 0 10px 0 -20px;
+    border-radius: 100% 0% 0% 100% / 50% 50% 50% 50%;
+}
+
+.list ul li::first-line {
+    color: #e5ff00;
+}
+
+.list ul li::first-letter {
+    color: #cf0b0b;
+    font-style: italic;
+}
+
+
+/* --------------DOGGIE------------- */
+
+.doggie {
+    margin: 0 0 100px 0;
+    border: 1px solid #000;
+    font-family: "Roboto", sans-serif;
+}
+
+.subtitle {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 200%;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: #5d62b5;
+    margin: 0 0 28px 0;
+}
+
+.subtitle::before {
+    content: '';
+    display: inline-block;
+    background: url("../img/subtitle_icon.png") center no-repeat;
+    width: 17px;
+    height: 16px;
+    margin: 0 16px -3px 0;
+}
+
+.doggie .title {
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 117%;
+    margin: 0 0 68px 0;
+}
+
+.items .item:not(:last-child) {
+    margin: 0 24px 0 0;
+}
+
+.items {
+    font-size: 0;
+}
+
+.item {
+    display: inline-block;
+    max-width: 324px;
+    vertical-align: top;
+}
+
+.icon {
+    display: inline-block;
+    margin: 0 23px 0 0;
+    vertical-align: top;
+}
+
+.icon::before {
+    content: '';
+    display: inline-block;
+    width: 63px;
+    height: 63px;
+}
+
+.icon1::before {
+    content: '';
+    background: url("../img/dog_love.png") 0 0/cover no-repeat;
+}
+
+.icon2::before {
+    content: '';
+    background: url("../img/dog_vet.png") 0 0/cover no-repeat;
+}
+
+.icon3::before {
+    content: '';
+    background: url("../img/dog_stream.png") 0 0/cover no-repeat;
+}
+
+.itemcontent {
+    display: inline-block;
+    max-width: 235px;
+}
+
+.itemtitle {
+    font-weight: 900;
+    font-size: 19px;
+    line-height: 137%;
+    color: #f2726f;
+    margin: 0 0 20px 0;
+}
+
+.itemtext {
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+    color: #4b4b4b;
+}
+
+.icon {
+    display: inline-block;
+    width: 63px;
+    height: 63px;
+    vertical-align: top;
+    margin: 0 23px 0 0;
+}
+
+
+/* --------------HEALTHY-FOOD---------------- */
+
+.healthyfood {
+    font-family: "Helvetica Neue";
+    background: #252525;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    max-width: 255px;
+    margin: 0 auto 50px;
+    padding: 24px 24px 60px;
+    color: #fff;
+}
+
+.healthyfood .title {
+    font-size: 22px;
+    line-height: 118%;
+    letter-spacing: -0.275px;
+    text-transform: capitalize;
+    margin: 0 0 24px 0;
+}
+
+.healthyfood .title::after {
+    content: '';
+    display: block;
+    width: 56px;
+    height: 2px;
+    background-color: #34c759;
+    margin: 18px 0 0 0;
+}
+
+.text {
+    font-size: 13px;
+    line-height: 138%;
+    letter-spacing: -0.1625px;
+    opacity: .5;
+}
